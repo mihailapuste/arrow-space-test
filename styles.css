@@ -229,14 +229,15 @@ body {
         gap: 0;
     }
 
-    .hero-section {
-        padding: 32px 16px;
-    }
-
     .hero-text {
         font-size: 32px;
         line-height: 40px;
-        max-width: 500px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
     }
 
     .hero-text .accent {
@@ -248,8 +249,8 @@ body {
     }
 
     .hero-content {
-        width: 100%;
-        min-width: 100%;
+        height: 100%;
+        justify-content: flex-end;
     }
 }
 
