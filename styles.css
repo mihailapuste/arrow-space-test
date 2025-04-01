@@ -772,3 +772,21 @@ body {
         height: 280px;
     }
 }
+
+
+.property-card.project-card .property-details {
+    padding: 20px 24px;
+}
+
+.property-card.project-card .property-image {
+    height: 240px;
+}
+
+.property-card.project-card .new-listing-tag {
+    background-color: #222222;
+    color: #FAFAFA;
+}
+
+.property-card.project-card:first-child .property-details {
+    padding: 20px 24px;
+}
