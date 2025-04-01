@@ -7,13 +7,46 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Welcome to Yard Test!</h1>
-    <p id="message">This is a simple website.</p>
-    <button id="changeButton">Click Me!</button>
+    <header class="header">
+      <div class="container">
+        <nav class="topbar">
+          <div class="topbar-logo">
+            <div class="logo-container">
+              <img src="assets/logo_icon.svg" alt="Logo Icon" />
+              <img src="assets/logo_name.svg" alt="Logo Name" />
+            </div>
+          </div>
+          <div class="topbar-actions">
+            <div class="action-button">
+              <div class="action-text">Buy</div>
+            </div>
+            <div class="action-button">
+              <div class="action-text">Sell</div>
+            </div>
+            <div class="action-button">
+              <div class="action-text">Rent</div>
+            </div>
+          </div>
+          <div class="topbar-login">
+            <button id="loginTriggerButton" class="login-button">
+              <div class="login-text">Login</div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-    <div id="info">
-      <p id="infoText">This is some additional information.</p>
-    </div>
+    <main class="main-content">
+      <div class="container">
+        <h1>Welcome to Yard Test!</h1>
+        <p id="message">This is a simple website.</p>
+        <button id="changeButton">Click Me!</button>
+
+        <div id="info">
+          <p id="infoText">This is some additional information.</p>
+        </div>
+      </div>
+    </main>
 
     <script src="script.js"></script>
   </body>

@@ -1,32 +1,129 @@
 body {
     font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    min-height: 100vh;
 }
 
-h1 {
-    color: #333;
+:root {
+    --Primary: #FF385C;
+    --Secondary: #222222;
+    --Neutral-200: #F5F5F5;
+    --Neutral-600: #C9C9C9;
 }
 
-p {
-    color: #555;
+.container {
+    width: auto;
+    box-sizing: border-box;
+    margin: 0px 16px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
+.main-content {
+    padding-top: 70px;
+}
+
+.header {
+    background: white;
+    border-bottom: 1px var(--Neutral-200) solid;
+}
+
+.topbar {
+    display: flex;
+    height: 88px;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    overflow: hidden;
+}
+
+.topbar-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 40px;
+}
+
+.topbar-actions {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.action-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
+
+.action-text {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.20);
+    font-size: 16px;
+    font-family: Outfit, sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.topbar-login {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    display: flex;
+}
+
+.login-button {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    outline: 1px var(--Neutral-600) solid;
+    outline-offset: -1px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    background: transparent;
     border: none;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.login-text {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.20);
+    font-size: 16px;
+    font-family: Outfit, sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0px 40px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0px 288px;
+    }
 }
