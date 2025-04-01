@@ -635,6 +635,69 @@ body {
     z-index: 1;
 }
 
+/* Medium screens (> 768px): 3 rows layout */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card1"
+            "card2 card3"
+            "card4 card4";
+        gap: 24px;
+    }
+
+    .service-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .service-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .service-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .service-card:nth-child(4) {
+        grid-area: card4;
+    }
+}
+
+/* Large screens (> 1024px): 2 rows with special width distribution */
+@media screen and (min-width: 1025px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "card1 card1 card2"
+            "card3 card4 card4";
+    }
+
+    .service-card:nth-child(1) {
+        grid-area: card1;
+    }
+
+    .service-card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .service-card:nth-child(3) {
+        grid-area: card3;
+    }
+
+    .service-card:nth-child(4) {
+        grid-area: card4;
+    }
+}
+
+/* Mobile: 1 item per row */
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .service-content {
     position: relative;
     z-index: 2;
