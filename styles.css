@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: Outfit, sans-serif;
     margin: 0;
     background-color: #f0f0f0;
     min-height: 100vh;
@@ -38,17 +38,10 @@ body {
 }
 
 .topbar-logo {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    height: 40px;
+    gap: 10px;
 }
 
 .logo-icon {
@@ -78,7 +71,6 @@ body {
     text-align: center;
     color: var(--Secondary);
     font-size: 16px;
-    font-family: Outfit, sans-serif;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
@@ -107,7 +99,6 @@ body {
     text-align: center;
     color: var(--Secondary);
     font-size: 16px;
-    font-family: Outfit, sans-serif;
     font-weight: 500;
     line-height: 24px;
     word-wrap: break-word;
