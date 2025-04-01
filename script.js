@@ -1,28 +1,33 @@
-// Main script functionality
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize topbar event listeners
-    const loginTriggerButton = document.getElementById('loginTriggerButton');
-    if (loginTriggerButton) {
-        loginTriggerButton.addEventListener('click', () => {
-            // Logic to show the login modal will go here
-            console.log('Login button clicked!'); 
-            // For now, let's just log. We'll add modal logic later.
-        });
-    }
-
-    // Existing button functionality
-    const messageElement = document.getElementById('message');
-    const changeButton = document.getElementById('changeButton');
-    const infoTextElement = document.getElementById('infoText');
-
-    if (changeButton && messageElement) {
-        changeButton.addEventListener('click', () => {
-            messageElement.textContent = 'You clicked the button!';
-        });
-    }
-
-    // Example interaction with infoText
-    if (infoTextElement) {
-        // You could add interactions here if needed
-    }
+    initializeToggleButton();
 });
+
+function initializeToggleButton() {
+    const toggleButton = document.getElementById('toggleButton');
+    const secondRowCards = document.querySelectorAll('.second-row');
+    const toggleIcon = document.querySelector('.toggle-icon');
+    const toggleText = document.querySelector('.toggle-text');
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', function() {
+            const isHidden = secondRowCards[0].style.display === 'none' || secondRowCards[0].style.display === '';
+
+            secondRowCards.forEach(card => {
+                card.style.display = isHidden ? 'flex' : 'none';
+            });
+
+            toggleText.textContent = isHidden ? 'View less' : 'View more';
+
+            if (isHidden) {
+                toggleIcon.classList.remove('down-icon');
+                toggleIcon.classList.add('up-icon');
+
+                return;
+            } 
+
+            toggleIcon.classList.remove('up-icon');
+            toggleIcon.classList.add('down-icon');
+        });
+    }
+}
