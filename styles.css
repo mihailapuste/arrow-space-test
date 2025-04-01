@@ -173,35 +173,35 @@ body {
 
 .search-input-container {
     flex: 1;
-    padding: 12px;
-    background: white;
-    border-radius: 8px 0 0 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    padding: 0 16px;
 }
 
 .search-input {
-    flex: 1;
-    height: 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--Secondary);
 }
 
-.search-placeholder {
+.search-input::placeholder {
     color: var(--Neutral-700);
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
+    font-family: Outfit, sans-serif;
+}
+
+.search-input:focus {
+    outline: none;
 }
 
 .search-button {
-    height: 56px;
-    padding: 16px;
+    width: 48px;
+    height: 48px;
     background: var(--Primary);
     border-radius: 8px;
     display: flex;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
 }
