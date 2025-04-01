@@ -600,7 +600,6 @@ body {
     }
 }
 
-/* Other Services Section */
 .other-services-section {
     margin: 80px 0;
 }
@@ -635,66 +634,75 @@ body {
     z-index: 1;
 }
 
-/* Medium screens (> 768px): 3 rows layout */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+/* Mobile screens (< 769px) */
+@media screen and (max-width: 768px) {
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+/* Medium screens (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1520px) {
     .services-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "card1 card1"
-            "card2 card3"
-            "card4 card4";
+        grid-template-rows: auto auto auto;
         gap: 24px;
     }
-
+    /* Full width for the first item */
     .service-card:nth-child(1) {
-        grid-area: card1;
+        grid-column: 1 / -1;
     }
-
-    .service-card:nth-child(2) {
-        grid-area: card2;
-    }
-
+    /* Let the second and third items take one column each */
+    .service-card:nth-child(2),
     .service-card:nth-child(3) {
-        grid-area: card3;
+        min-height: 318px;
     }
-
+    /* Full width for the fourth item */
     .service-card:nth-child(4) {
-        grid-area: card4;
+        grid-column: 1 / -1;
     }
 }
 
-/* Large screens (> 1024px): 2 rows with special width distribution */
-@media screen and (min-width: 1025px) {
+/* Specific fix for screen width around 990px */
+@media screen and (min-width: 769px) and (max-width: 1520px) {
+    /* Force the grid to maintain 2 columns */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Ensure cards 2 and 3 stay side by side */
+    .service-card:nth-child(2) {
+        grid-column: 1;
+    }
+    
+    .service-card:nth-child(3) {
+        grid-column: 2;
+    }
+}
+
+/* Large screens (> 1024px) */
+@media screen and (min-width: 1521px) {
     .services-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
+        grid-template-areas:
             "card1 card1 card2"
             "card3 card4 card4";
     }
-
     .service-card:nth-child(1) {
         grid-area: card1;
     }
-
     .service-card:nth-child(2) {
         grid-area: card2;
     }
-
     .service-card:nth-child(3) {
         grid-area: card3;
     }
-
     .service-card:nth-child(4) {
         grid-area: card4;
-    }
-}
-
-/* Mobile: 1 item per row */
-@media screen and (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
     }
 }
 
@@ -748,7 +756,7 @@ body {
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .service-title {
         font-size: 24px;
         line-height: 32px;
@@ -759,7 +767,7 @@ body {
     .other-services-section {
         margin: 40px 0;
     }
-    
+
     .service-card {
         height: 280px;
     }
