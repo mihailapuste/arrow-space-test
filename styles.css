@@ -416,13 +416,13 @@ body {
 }
 
 /* Responsive styles for listings grid */
-@media screen and (max-width: 1279px) {
+@media screen and (min-width: 1601px) {
     .listings-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1600px) and (min-width: 768px) {
     .listings-grid {
         grid-template-columns: repeat(2, 1fr);
     }
