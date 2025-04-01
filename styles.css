@@ -204,23 +204,6 @@ body {
     cursor: pointer;
 }
 
-.search-icon {
-    width: 24px;
-    height: 24px;
-    position: relative;
-    overflow: hidden;
-}
-
-.search-icon-outline {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: 3px;
-    top: 3px;
-    border: 2px solid var(--Neutral-100);
-    border-radius: 50%;
-}
-
 /* Tablet */
 @media screen and (min-width: 768px) {
     .container {
