@@ -936,6 +936,78 @@ body {
     margin: 0;
 }
 
+.faq-cards-section {
+    padding: 40px 0px;
+    background: white;
+}
+
+.faq-cards-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 24px;
+}
+
+.faq-item {
+    align-self: stretch;
+    padding-bottom: 24px;
+    border-bottom: 1px var(--Neutral-400, #EBEBEB) solid;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.faq-question {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    word-wrap: break-word;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.faq-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: var(--Neutral-800);
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 16px;
+}
+
+.faq-item[data-state="expanded"] .faq-answer {
+    max-height: 500px;
+}
+
+.faq-item[data-state="expanded"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
 .benefits-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1209,19 +1281,21 @@ body {
 }
 
 .faq-content {
-    flex: 1 1 0;
-    justify-content: flex-start;
-    align-items: center;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
 }
 
 .faq-question {
-    flex: 1 1 0;
     color: black;
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
     word-wrap: break-word;
+    padding: 0;
+    margin: 0;
 }
 
 .faq-arrow {

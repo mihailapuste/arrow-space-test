@@ -1,6 +1,6 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     initializeToggleButton();
+    initializeFaqItems();
 });
 
 function initializeToggleButton() {
@@ -30,4 +30,28 @@ function initializeToggleButton() {
             toggleIcon.classList.add('down-icon');
         });
     }
+}
+
+function initializeFaqItems() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const faqContent = item.querySelector('.faq-content');
+        
+        faqContent.addEventListener('click', function() {
+            const currentState = item.getAttribute('data-state');
+            
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.setAttribute('data-state', 'collapsed');
+                }
+            });
+            
+            if (currentState === 'collapsed') {
+                item.setAttribute('data-state', 'expanded');
+            } else {
+                item.setAttribute('data-state', 'collapsed');
+            }
+        });
+    });
 }
