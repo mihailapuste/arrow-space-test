@@ -898,7 +898,7 @@ body {
     gap: 24px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1599px) {
     .service-info-card {
         flex: 1 1 280px;
         max-width: calc(50% - 12px);
@@ -1024,6 +1024,7 @@ body {
 }
 
 .service-info-button {
+    min-width: fit-content;
     height: 56px;
     padding: 16px 24px;
     border-radius: 8px;
@@ -1035,6 +1036,9 @@ body {
     line-height: 24px;
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .service-info-button:hover {
