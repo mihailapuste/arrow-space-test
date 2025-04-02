@@ -916,7 +916,6 @@ body {
     }
 }
 
-/* why us */
 .benefits-cards-section {
     padding: 40px 0px;
     background: var(--Neutral-400, #EBEBEB);
@@ -1171,4 +1170,23 @@ body {
     .newsletter-content {
         padding: 32px 24px;
     }
+}
+
+.faq-cards-section {
+    padding: 40px 0px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0px 0px 51px 0px;
+    margin: 0;
+}
+
+.faq-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 100%;
+    gap: 24px;
 }
