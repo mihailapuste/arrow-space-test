@@ -14,7 +14,16 @@ function initializeToggleButton() {
             const isHidden = secondRowCards[0].style.display === 'none' || secondRowCards[0].style.display === '';
 
             secondRowCards.forEach(card => {
-                card.style.display = isHidden ? 'flex' : 'none';
+                if (isHidden) {
+                    card.style.display = 'flex';
+                    void card.offsetWidth;
+                    card.style.opacity = '1';
+                } else {
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300); 
+                }
             });
 
             toggleText.textContent = isHidden ? 'View less' : 'View more';
@@ -22,7 +31,6 @@ function initializeToggleButton() {
             if (isHidden) {
                 toggleIcon.classList.remove('down-icon');
                 toggleIcon.classList.add('up-icon');
-
                 return;
             } 
 
