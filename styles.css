@@ -59,7 +59,6 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    gap: 32px;
 }
 
 .action-button {
@@ -1418,10 +1417,14 @@ body {
 }
 
 .logo-container {
-    width: 198px;
+    width: auto;
+    max-width: 198px;
     height: 40px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .footer-social {
@@ -1498,6 +1501,15 @@ body {
     height: 21.33px;
     left: 5.33px;
     top: 5.33px;
+}
+
+.footer-logo-icon {
+    width: auto;
+}
+
+.footer-logo-name {
+    width: auto;
+    filter: brightness(0) invert(1);
 }
 
 @media screen and (max-width: 1200px) {
