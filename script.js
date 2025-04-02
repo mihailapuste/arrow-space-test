@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeToggleButton();
     initializeFaqItems();
     initializeSearchContainer();
+    initializeLoginModal();
 });
 
 function initializeSearchContainer() {
@@ -78,4 +79,33 @@ function initializeFaqItems() {
             }
         });
     });
+}
+
+function initializeLoginModal() {
+    const loginButton = document.getElementById('loginTriggerButton');
+    const modal = document.getElementById('loginModal');
+    const closeButton = document.querySelector('.close-modal');
+    
+
+    if (loginButton) {
+        loginButton.addEventListener('click', function() {
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', function() {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+    });
+
 }
