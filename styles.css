@@ -962,15 +962,22 @@ body {
     }
 }
 
-.service-icon-circle {
+.icon-circle {
     width: 112px;
     height: 112px;
     padding: 24px;
-    background: #FFDBE2;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.service-icon-circle {
+    background: #FFDBE2;
+}
+
+.benefits-icon-circle {
+    background: var(--Tertiary-Light-100, #E8E8FF);
 }
 
 .service-svg-icon {
