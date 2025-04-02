@@ -519,7 +519,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
-        margin: 0px 16px;
+        padding: 0px 16px;
     }
 
     .logo-name {
@@ -567,7 +567,7 @@ body {
 
 @media screen and (min-width: 768px) {
     .container {
-        margin: 0px 40px;
+        padding: 0px 40px;
     }
 
     .hero-section {
@@ -594,7 +594,7 @@ body {
 
 @media screen and (min-width: 1280px) {
     .container {
-        margin: 0px 288px;
+        padding: 0px 288px;
     }
 
     .hero-section {
@@ -1368,11 +1368,13 @@ body {
     outline-offset: -0.75px;
 }
 
+.footer-bg-color {
+    background: var(--Secondary);
+}
+
 .footer-links-section {
     align-self: stretch;
     padding: 64px 0 8px;
-    background: var(--Secondary);
-    border-bottom: 1px var(--Secondary) solid;
     display: flex;
     justify-content: center;
 }
@@ -1444,7 +1446,6 @@ body {
 .footer-section {
     align-self: stretch;
     padding-bottom: 64px;
-    background: var(--Secondary);
     display: flex;
     flex-direction: column;
     justify-content: center;
