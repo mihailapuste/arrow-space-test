@@ -918,9 +918,12 @@ body {
     }
 }
 
+.benefits-bg-color {
+    background: var(--Neutral-400, #EBEBEB);
+}
+
 .benefits-cards-section {
     padding: 40px 0px;
-    background: var(--Neutral-400, #EBEBEB);
 }
 
 .benefits-title {
