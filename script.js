@@ -1,7 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeToggleButton();
     initializeFaqItems();
+    initializeSearchContainer();
 });
+
+function initializeSearchContainer() {
+    const searchInput = document.querySelector('.search-input');
+    const searchContainer = document.querySelector('.search-container');
+    
+    if (searchInput && searchContainer) {
+        searchInput.addEventListener('focus', function() {
+            searchContainer.classList.add('search-container-focused');
+        });
+        
+        searchInput.addEventListener('blur', function() {
+            searchContainer.classList.remove('search-container-focused');
+        });
+    }
+}
 
 function initializeToggleButton() {
     const toggleButton = document.getElementById('toggleButton');
