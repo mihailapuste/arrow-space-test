@@ -929,6 +929,13 @@ body {
     margin: 0;
 }
 
+.faq-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
 .benefits-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -965,6 +972,15 @@ body {
 @media screen and (max-width: 768px) {
     .benefits-cards-container {
         grid-template-columns: 1fr;
+    }
+    .faq-title,
+    .benefits-title,
+    .section-title {
+        font-size: 24px;
+    }
+    .faq-question {
+        font-size: 20px;
+        line-height: 28px;
     }
 }
 
@@ -1176,17 +1192,51 @@ body {
     padding: 40px 0px;
 }
 
-.faq-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: 600;
-    padding: 0px 0px 51px 0px;
-    margin: 0;
+.faq-cards-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 51px;
 }
 
-.faq-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    max-width: 100%;
-    gap: 24px;
+.faq-item {
+    align-self: stretch;
+    padding-bottom: 24px;
+    border-bottom: 1px var(--Neutral-400, #EBEBEB) solid;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+}
+
+.faq-content {
+    flex: 1 1 0;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+.faq-question {
+    flex: 1 1 0;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    word-wrap: break-word;
+}
+
+.faq-arrow {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-arrow-icon {
+    width: 10px;
+    height: 5px;
+    left: 5px;
+    top: 7.50px;
+    position: absolute;
+    outline: 1.50px var(--Secondary, #222222) solid;
+    outline-offset: -0.75px;
 }
